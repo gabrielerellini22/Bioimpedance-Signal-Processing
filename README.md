@@ -9,7 +9,7 @@ The project involves the design, characterization, and validation of an in-vitro
 - **Hardware Optimization**: Automated logic to configure PLL dividers and DAC parameters for the MAX30009, ensuring frequency precision and stimulus stability.
 - **Metrological Validation**: A complete pipeline to convert raw ADC counts into physical Impedance (Ohm), validated against passive benchmarks and Gold Standard instruments (Millicell ERS-2).
 - **Physical Modeling**: Simulation of current density distribution ($J$) based on actual 24-well plate and STX01 electrode geometries to ensure stimulus uniformity.
-- **Signal Processing**: (Incoming) Advanced filtering and outlier removal using Median Absolute Deviation (MAD) for biological signal integrity.
+- **Advanced Signal Processing & Statistics**: Complete pipeline for biological data including outlier removal via Median Absolute Deviation (MAD), zero-phase FIR filtering, Nyquist plots, Welch Power Spectral Density (PSD) analysis, and automated statistical evaluations.
 
 ## 📂 Repository Structure
 - **`Stimulus_Frequency_Calculator.m`**: Computes hardware-level parameters (PLL, KDIV, OSR) for the desired frequency.
@@ -17,10 +17,12 @@ The project involves the design, characterization, and validation of an in-vitro
 - **`Current_Settings.m`**: Core function for calculating effective voltage and resistance combinations (Dependency).
 - **`Current_Density_Distribution.m`**: Geometric field simulation and visualization of the electrical stimulus.
 - **`ADC_Counts_to_Ohm_Conversion.m`**: Automated processing of large CSV datasets for calibration and impedance conversion.
+- **`Raw_Data_Importer_and_Calibration.m`**: Parses raw biological datasets, applies hardware calibration coefficients, and generates preliminary visualizations.
+- **`Biological_Signal_Processing_and_Statistics.m`**: Master script for biological signal processing (MAD, FIR), frequency domain analysis (Welch PSD), and comprehensive statistical validation (tables and decay plots).
 
 ## 🎓 About the Author
 **Gabriele Rellini** *Biomedical Engineer specialized in Biomechanics, Biomaterials, and Tissue Engineering.* University of Florence | Master's Degree with Honors.
 
-Expertise: MATLAB, Bioimpedance, Signal Processing, R&D.
+Expertise: MATLAB, Bioimpedance, Signal Processing, Data Analysis, R&D.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/gabrielerellini/)
